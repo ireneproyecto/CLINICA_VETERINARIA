@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>✏️ Editar cita</h2>
+<form method="post">
+    <div class="mb-2">
+        <label>Mascota:</label>
+        <input type="text" name="mascota" value="{{ cita[1] }}" class="form-control" required>
+    </div>
+    <div class="mb-2">
+        <label>Propietario:</label>
+        <input type="text" name="propietario" value="{{ cita[2] }}" class="form-control" required>
+    </div>
+    <div class="mb-2">
+        <label>Especie:</label>
+        <input type="text" name="especie" value="{{ cita[3] }}" class="form-control">
+    </div>
+    <div class="mb-2">
+        <label>Fecha:</label>
+        <input type="text" name="fecha" value="{{ cita[4] }}" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <a href="/" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

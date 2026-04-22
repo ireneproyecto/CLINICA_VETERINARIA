@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> Agendar nueva cita</h2>
+<form method="post">
+    <div class="mb-2">
+        <label>Mascota:</label>
+        <input type="text" name="mascota" class="form-control" required>
+    </div>
+    <div class="mb-2">
+        <label>Propietario:</label>
+        <input type="text" name="propietario" class="form-control" required>
+    </div>
+    <div class="mb-2">
+        <label>Especie:</label>
+        <input type="text" name="especie" class="form-control">
+    </div>
+    <div class="mb-2">
+        <label>Fecha (YYYY-MM-DD HH:MM):</label>
+        <input type="text" name="fecha" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">Agendar cita</button>
+    <a href="/" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

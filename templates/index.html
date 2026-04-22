@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🐾 Clínica Veterinaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1920&h=400&fit=crop');
+            background-size: cover;
+            background-position: center 30%;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .navbar-custom {
+            background-color: #2c7a4d;
+        }
+        .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+        }
+        .navbar-custom .nav-link:hover {
+            background-color: #1e5a38;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #1e3a2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .btn-warning, .btn-danger, .btn-success, .btn-primary {
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section con imagen -->
+    <div class="hero">
+        <h1><i class="bi bi-heart-fill"></i> Clínica Veterinaria</h1>
+        <p>Cuidamos a tus mascotas como si fueran nuestras</p>
+    </div>
+
+    <!-- Navbar personalizado -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-house-door"></i> VetCare
+            </a>
+            <div class="ms-auto">
+                <a class="nav-link d-inline-block me-3" href="/">
+                    <i class="bi bi-calendar3"></i> Agenda
+                </a>
+                <a class="nav-link d-inline-block" href="/nueva">
+                    <i class="bi bi-plus-circle"></i> Agendar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <i class="bi bi-suit-heart-fill text-danger"></i> VetCare - Tu mascota en las mejores manos
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
