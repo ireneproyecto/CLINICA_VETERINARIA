@@ -1,25 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2> Agendar nueva cita</h2>
-<form method="post">
-    <div class="mb-2">
-        <label>Mascota:</label>
-        <input type="text" name="mascota" class="form-control" required>
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Agendar nueva cita</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi-dog"></i> Mascota:</label>
+                        <input type="text" name="mascota" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi-person"></i> Propietario:</label>
+                        <input type="text" name="propietario" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi-tags"></i> Especie:</label>
+                        <input type="text" name="especie" class="form-control" placeholder="Ej: Perro, Gato, Ave">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi-calendar3"></i> Fecha:</label>
+                        <input type="text" name="fecha" class="form-control" placeholder="YYYY-MM-DD HH:MM" required>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-check-lg"></i> Agendar cita
+                        </button>
+                        <a href="/" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="mb-2">
-        <label>Propietario:</label>
-        <input type="text" name="propietario" class="form-control" required>
-    </div>
-    <div class="mb-2">
-        <label>Especie:</label>
-        <input type="text" name="especie" class="form-control">
-    </div>
-    <div class="mb-2">
-        <label>Fecha (YYYY-MM-DD HH:MM):</label>
-        <input type="text" name="fecha" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-success">Agendar cita</button>
-    <a href="/" class="btn btn-secondary">Cancelar</a>
-</form>
+</div>
 {% endblock %}
